@@ -27,14 +27,18 @@ let isScrolling = 0;
 let timeoutId;
 let down = "down";
 let up = "up";
-
+$(window).on('load', function() {
+  console.log("読み込み完了");
+  $(".load").css({
+    "display":"none"
+  });
+});
 $(function() {
   let start = 0;
+  console.log("HelloWorld");
 
-  $(window).on('load', function() {
-    console.log("読み込み完了");
-  });
-  
+
+
   $(window).scroll(function() {
     let pos = $(this).scrollTop();
     h_boundary = start - pos;
