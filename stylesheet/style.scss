@@ -1,5 +1,8 @@
 @import "_variable.scss";
 @import "_animation.scss";
+@mixin maxwidth{
+  max-width: 1140px;
+}
 img,video{
   pointer-events: none;
 }
@@ -109,10 +112,10 @@ header{
 }
 
 
-
 .first{
   width: 100vw;height: 100vh;
   position: relative;
+  top: 0;left: 0;
   overflow: hidden;
   z-index: -1;
 
@@ -135,7 +138,8 @@ header{
   }
 }
 .content{
-  margin: 150px 0;
+  @include maxwidth;
+  margin: 150px auto;
 
   img{
     width: 700px;
@@ -145,7 +149,7 @@ header{
     position: absolute;
   }
   &_first,&_second{
-    margin: 70px 100px;
+    margin: 70px auto;
     position: relative;
     height: 400px;
     &_text{
@@ -181,9 +185,9 @@ header{
     }
   }
 }
-
 .clouds{
-  margin: 0 100px;
+  @include maxwidth;
+  margin: 0 auto;
 
 
   @include grid(1fr 1fr 1fr,1fr 1fr 1fr,40px);

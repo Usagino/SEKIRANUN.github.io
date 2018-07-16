@@ -10,4 +10,4 @@ jsを必ず使ってインタラクションのあるサイトを作ることが
 
 実際に作ったサイトは以下になります。
 
-<a href="https://usagino.github.io/SEKIRANUN.github.io/">SEKIRANUN</a>
+<a href="https://usagino.github.io/SEKIRANUN.github.io/" target="_blank">SEKIRANUN</a>

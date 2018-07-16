@@ -233,6 +233,8 @@ header .menu {
   width: 100vw;
   height: 100vh;
   position: relative;
+  top: 0;
+  left: 0;
   overflow: hidden;
   z-index: -1;
 }
@@ -265,7 +267,8 @@ header .menu {
 }
 
 .content {
-  margin: 150px 0;
+  max-width: 1140px;
+  margin: 150px auto;
 }
 
 .content img {
@@ -277,7 +280,7 @@ header .menu {
 }
 
 .content_first, .content_second {
-  margin: 70px 100px;
+  margin: 70px auto;
   position: relative;
   height: 400px;
 }
@@ -314,7 +317,8 @@ header .menu {
 }
 
 .clouds {
-  margin: 0 100px;
+  max-width: 1140px;
+  margin: 0 auto;
   columns_list: 3;
   rows_list: 3;
   display: -ms-grid;
