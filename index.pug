@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+html(lang="en")
+  include includes/header.pug
+  body
+    header
+      div.close
+        span
+        span
+      nav.menu
+        ul
+          li About
+          li Clouds
+    main
+      
+      div.hamburger
+        span.hamburger_span
+        span.hamburger_span
+        span.hamburger_span
+        span.hamburger_span
+        span.hamburger_span
+      
+          
+      div.first
+        video(loop autoplay poster="material/cloud.jpg")
+          source(src="material/cloud.mp4")
+        img(src="material/cloud.svg")
+        div.first_screen
+      div.content
+        div.content_first
+          div.content_first_text
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae iure nobis velit enim dolores molestiae, voluptatem ducimus officia quasi, tempore vel excepturi, aliquid repellendus cupiditate? Quasi veniam quaerat dolore, odio.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae iure nobis velit enim dolores molestiae, voluptatem ducimus officia quasi, tempore vel excepturi, aliquid repellendus cupiditate? Quasi veniam quaerat dolore, odio.
+          img(src="material/content_1.jpg")
+            
+        div.content_second
+          div.content_second_text
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae iure nobis velit enim dolores molestiae, voluptatem ducimus officia quasi, tempore vel excepturi, aliquid repellendus cupiditate? Quasi veniam quaerat dolore, odio.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae iure nobis velit enim dolores molestiae, voluptatem ducimus officia quasi, tempore vel excepturi, aliquid repellendus cupiditate? Quasi veniam quaerat dolore, odio.
+          img(src="material/content_2.jpg")
+      div.clouds
+        div.clouds_cloud.clouds_c1
+        div.clouds_cloud.clouds_c2
+        div.clouds_cloud.clouds_c3
+        div.clouds_cloud.clouds_c4
+        div.clouds_cloud.clouds_c5
+        div.clouds_cloud.clouds_c6
+        div.clouds_cloud.clouds_c7
+        div.clouds_cloud.clouds_c8
+    footer
+  
+  include includes/footer.pug
