@@ -50,7 +50,7 @@ $(function(){
     timeoutId = setTimeout( function () {
       arrow_remove("up");
       arrow_remove("down");
-    },1000);
+    },2000);
 
   });
   $(".hamburger").click(function() {
