@@ -254,8 +254,8 @@ header .menu {
 }
 
 .first img {
-  width: 90vw;
-  height: 90vh;
+  width: 600px;
+  height: auto;
   position: absolute;
   z-index: 2;
   position: absolute;

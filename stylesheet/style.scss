@@ -2,7 +2,7 @@
 @import "_animation.scss";
 @mixin maxwidth{
   max-width: 1140px;
-  // 
+  //
 }
 img,video{
   pointer-events: none;
@@ -132,7 +132,7 @@ header{
     object-fit: cover;
   }
   img{
-    width: 90vw;height: 90vh;
+    width: 600px;height: auto;
     position: absolute;
     z-index: 2;
     @include center;
