@@ -22,20 +22,22 @@ let menu_anime = (opacity, z_index, transform) => {
     "transform": "translateX(" + transform + "px)"
   });
 }
-
+let start= 0;
 let isScrolling = 0;
 let timeoutId;
 let down = "down";
 let up = "up";
+let animationEnd = 'webkitAnimationEnd oanimationend msAnimationEnd animationend';
+
+
 $(window).on('load', function() {
-  console.log("読み込み完了");
-  $(".load").css({
-    "display":"none"
+  $(".bucket .screen").on(animationEnd, function() {
+    console.log("HelloWorld");
+    $(".loading").addClass('trash')
   });
 });
+
 $(function() {
-  let start = 0;
-  console.log("HelloWorld");
 
 
 
@@ -44,11 +46,13 @@ $(function() {
     h_boundary = start - pos;
     console.log(h_boundary);
     if (1 < h_boundary) {
-      arrow_add("up");
       arrow_remove("down");
+      arrow_add("up");
+
     } else if (-1 > h_boundary) {
-      arrow_add("down");
       arrow_remove("up");
+      arrow_add("down");
+
     } else {
       arrow_remove("up");
       arrow_remove("down");
@@ -73,10 +77,6 @@ $(function() {
     z_index = -1;
     translateX = 0;
     menu_anime(opacity, z_index, translateX);
+
   });
 });
-
-
-// window.onload = function() {
-//   console.log();
-// };

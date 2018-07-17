@@ -1,0 +1,194 @@
+
+@mixin center{
+  position: absolute;
+  top: 0;bottom: 0;
+  left: 0;right: 0;
+  margin: auto;
+}
+$gray: #d6d6d6;
+.loading{
+  content: "";
+  position: fixed;
+  top: 0;left: 0;
+  height: 100vh;width: 100vw;
+  background: white;
+  z-index: 9999;
+  &_anime{
+    @include center
+    height: 250px;width: 200px;
+    .bucket{
+      span,div{
+        position: absolute;
+        content: "";
+        margin: auto;
+        left: 0;right: 0;
+        bottom: 0;
+      }
+      span{
+        z-index: 10;
+        height: 10px;
+        background: rgb(87, 87, 87);
+        left: 0;right: 0;
+        border-radius: 5px;
+        &:nth-child(1){
+          width: 100px;
+        }
+
+        &:nth-child(2){
+          width: 90px;
+          transform-origin: left;
+          transform: rotate(0deg);
+          animation: rotate2 1.8s ease 0s forwards;
+        }
+        @keyframes rotate2{
+          100%{
+            transform: rotate(-110deg);
+          }
+        }
+        &:nth-child(3){
+          width: 90px;
+          transform-origin: right;
+          transform: rotate(0deg);
+          animation: rotate3 1.3s ease 0.5s forwards;
+        }
+        @keyframes rotate3{
+          100%{
+            transform: rotate(110deg);
+          }
+        }
+      }
+      .water{
+        z-index: 7;
+        bottom: 10px;
+        width: 153px;
+        height: 70px;
+        background-color: #4fd2e2;
+        -webkit-clip-path:polygon(0 0, 100% 0, 80% 100%, 20% 100%);
+        clip-path:polygon(0 0, 100% 0, 80% 100%, 20% 100%);
+      }
+      .screen{
+        z-index: 9;
+        bottom: 10px;
+        width: auto;
+        height: 70px;
+        background-size: cover;
+        transform:translateY(0px);
+        background-color: white;
+        animation: screen 2s ease-in 1.8s forwards
+      }
+    }
+    .cloud{
+      position: relative;
+      top: 0;
+      left: 0;right:0;
+      margin: auto;
+      width: 100%;height: 240px;
+      display: block;
+      .rain{
+        overflow: hidden;
+        position: absolute;
+        width: 90px;height: 240px;
+        left: 0;right: 0;
+        top: 10px;
+        margin: auto;
+        z-index: 9;
+        img{
+          opacity: 0;
+          bottom: 0;
+          left: 0;right: 0;
+          width: 80px;
+          height: 500px;
+          margin: auto;
+          position: absolute;
+          animation: rain 2s linear 1.8s forwards;
+          -webkit-filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
+          filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
+        }
+      }
+
+      span{
+        position: absolute;
+        content: "";
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        background-color: $gray;
+        z-index: 9;
+      }
+      @for $i from 1 through 8{
+        &_#{$i}{
+          opacity: 0;
+          animation: c_opacity 0.2s ease #{$i * 0.2}s forwards;
+        }
+      }
+
+      &_1{
+        left: 81px;
+        top: -1px;
+      }
+      &_2{
+        left: 57px;
+        top: 3px;
+      }
+      &_3{
+        left: 68px;
+        top: 12px;
+      }
+      &_4{
+        left: 94px;
+        top: 20px;
+      }
+      &_5{
+        left: 106px;
+        top: 5px;
+      }
+      &_6{
+        left: 47px;
+        top: 17px;
+      }
+      &_7{
+        left: 112px;
+        top: 25px;
+      }
+      &_8{
+        left: 70px;
+        top: 25px;
+      }
+    }
+  }
+}
+
+@keyframes screen{
+  0%{
+    transform: translateY(0px);
+  }
+  100%{
+    transform: translateY(-70px);
+  }
+}
+@keyframes c_opacity{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 0.9;
+  }
+}
+@keyframes rain{
+  90%{
+    opacity: 1;
+  }
+  100%{
+    bottom: -280px;
+    opacity: 0;
+  }
+}
+.trash{
+  animation: trash 2s ease 0.6s forwards;
+}
+@keyframes trash{
+
+  100%{
+    left: 100vw;
+  }
+}
