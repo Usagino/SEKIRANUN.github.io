@@ -3,7 +3,7 @@ html(lang="en")
   include includes/header.pug
   
   body
-    include includes/loading.pug
+    //- include includes/loading.pug
     header
       div.close
         span
@@ -36,6 +36,7 @@ html(lang="en")
           div.content_second_text
             p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae iure nobis velit enim dolores molestiae, voluptatem ducimus officia quasi, tempore vel excepturi, aliquid repellendus cupiditate? Quasi veniam quaerat dolore, odio.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae iure nobis velit enim dolores molestiae, voluptatem ducimus officia quasi, tempore vel excepturi, aliquid repellendus cupiditate? Quasi veniam quaerat dolore, odio.
           img(src="material/content_2.jpg")
+            
       div.clouds
         div.clouds_cloud.clouds_c1
         div.clouds_cloud.clouds_c2
@@ -45,6 +46,16 @@ html(lang="en")
         div.clouds_cloud.clouds_c6
         div.clouds_cloud.clouds_c7
         div.clouds_cloud.clouds_c8
+      div.clouds_wrap
+        div.clouds_wrap_close
+          span
+          span
+        div.clouds_contentwrap
+          div.text
+            p
+          div.image
+          div.map
+          
     footer
   
   include includes/footer.pug

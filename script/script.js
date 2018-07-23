@@ -29,6 +29,7 @@ let down = "down";
 let up = "up";
 let animationEnd = 'webkitAnimationEnd oanimationend msAnimationEnd animationend';
 
+let text = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
 
 $(window).on('load', function() {
   $(".bucket .screen").on(animationEnd, function() {
@@ -38,14 +39,12 @@ $(window).on('load', function() {
 });
 
 $(function() {
-
-
-
   $(window).scroll(function() {
     let pos = $(this).scrollTop();
     h_boundary = start - pos;
     console.log(h_boundary);
     if (1 < h_boundary) {
+
       arrow_remove("down");
       arrow_add("up");
 
@@ -77,6 +76,14 @@ $(function() {
     z_index = -1;
     translateX = 0;
     menu_anime(opacity, z_index, translateX);
-
   });
+
+  $(".clouds_cloud").click(function() {
+    $(".clouds_wrap").addClass('clouds_anime');
+    $(".clouds_contentwrap .text p").text(text);
+  });
+  $(".clouds_wrap_close").click(function() {
+    $(".clouds_wrap").removeClass('clouds_anime');
+  });
+
 });

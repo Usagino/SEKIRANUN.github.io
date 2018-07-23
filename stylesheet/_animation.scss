@@ -5,7 +5,7 @@
     left: 0;
   }
 }
-$anime:0.3s ease 0s forwards;
+$anime:0.3s ease 2 0s alternate;
 // --------------------------------------------------
 @keyframes ham_up_topleft{
   100%{
@@ -72,3 +72,11 @@ $anime:0.3s ease 0s forwards;
 .ham_down_bottomleft{animation:ham_down_bottomleft $anime;}
 .ham_down_bottomright{animation:ham_down_bottomright $anime;}
 // --------------------------------------------------
+.clouds_anime{
+  animation: clouds_wrap 0.3s ease 0s forwards;
+}
+@keyframes clouds_wrap{
+  100%{
+    transform: translateY(0px);
+  }
+}
