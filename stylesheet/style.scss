@@ -237,22 +237,17 @@ header{
       transition: filter 0.3s, -webkit-filter 0.3s;
     }
   }
-  &_c1{
-    background-image: url(../material/cloud_1.jpg);
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-    transition: -webkit-filter 0.3s;
-    transition: filter 0.3s;
-    transition: filter 0.3s, -webkit-filter 0.3s;
+  @for $i from 0 through 7{
+    &_c#{$i}{
+      background-image: url(../material/cloud_#{$i + 1}.jpg);
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+      transition: -webkit-filter 0.3s;
+      transition: filter 0.3s;
+      transition: filter 0.3s, -webkit-filter 0.3s;
+    }
   }
-  &_c2{
-    background-image: url(../material/cloud_2.jpg);
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-    transition: -webkit-filter 0.3s;
-    transition: filter 0.3s;
-    transition: filter 0.3s, -webkit-filter 0.3s;
-  }
+
 }
 .clouds_wrap{
   content: "";
@@ -289,7 +284,44 @@ header{
   }
 }
 .clouds_contentwrap{
+  box-sizing: border-box;
+  height: 100%;width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 'text image' 'map image';
+  padding: 50px;
+  grid-gap: 50px;
+  .text{
+    grid-area: text;
+  }
+  .image{
+    grid-area: image;
+    img{
+      width: 100%;height: 100%;
+      -o-object-fit: cover;
+      object-fit: cover;
+    }
+  }
+  .map{
+    grid-area: map;
+    iframe{
+      width: 100%;height: 100%;
+    }
+  }
+}
 
-  margin: 50px;
-
+footer{
+  background: #badae0;
+  height: 100px;
+  width: 100vw;
+  position: relative;
+  margin-top: 70px;
+  p{
+    color: white;
+    height: 20px;
+    width: 21em;
+    font-size: 15px;
+    @include center;
+  }
 }
