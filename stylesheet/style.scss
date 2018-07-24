@@ -5,21 +5,14 @@
   max-width: 1140px;
   //
 }
-html::-moz-selection{
-  background: #000;
-  color: #fff;
-}
-html::selection{
-  background: #000;
-  color: #fff;
-}
-html::-moz-selection{
-  background: #000;
-  color: #fff;
-}
-html::selection{
-  background: #000;
-  color: #fff;
+html{
+  p{
+    line-height: 2em;
+    letter-spacing: 0.1em;
+  }
+  h1{
+
+  }
 }
 img,video{
   pointer-events: none;
@@ -186,7 +179,7 @@ header{
       position: absolute;
       box-shadow: 0 2px 5px rgba(0,0,0,0.26);
       z-index: 10;
-      background-color: rgba(241, 241, 241, 0.61);
+      background-color: rgba(241, 241, 241, 0.8);
       padding: 30px;
       width: 45%;
     }
@@ -237,6 +230,7 @@ header{
       transition: filter 0.3s, -webkit-filter 0.3s;
     }
   }
+
   @for $i from 0 through 7{
     &_c#{$i}{
       background-image: url(../material/cloud_#{$i + 1}.jpg);
@@ -316,11 +310,11 @@ footer{
   height: 100px;
   width: 100vw;
   position: relative;
-  margin-top: 70px;
+  margin-top: 150px;
   p{
     color: white;
     height: 20px;
-    width: 21em;
+    width: 25em;
     font-size: 15px;
     @include center;
   }

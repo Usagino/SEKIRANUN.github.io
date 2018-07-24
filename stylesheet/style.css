@@ -370,24 +370,9 @@
   }
 }
 
-html::-moz-selection {
-  background: #000;
-  color: #fff;
-}
-
-html::selection {
-  background: #000;
-  color: #fff;
-}
-
-html::-moz-selection {
-  background: #000;
-  color: #fff;
-}
-
-html::selection {
-  background: #000;
-  color: #fff;
+html p {
+  line-height: 2em;
+  letter-spacing: 0.1em;
 }
 
 img, video {
@@ -593,7 +578,7 @@ header .menu {
   position: absolute;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
   z-index: 10;
-  background-color: rgba(241, 241, 241, 0.61);
+  background-color: rgba(241, 241, 241, 0.8);
   padding: 30px;
   width: 45%;
 }
@@ -1074,13 +1059,13 @@ footer {
   height: 100px;
   width: 100vw;
   position: relative;
-  margin-top: 70px;
+  margin-top: 150px;
 }
 
 footer p {
   color: white;
   height: 20px;
-  width: 21em;
+  width: 25em;
   font-size: 15px;
   position: absolute;
   top: 0;
