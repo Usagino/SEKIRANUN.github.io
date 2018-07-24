@@ -11,7 +11,7 @@ html{
     letter-spacing: 0.1em;
   }
   h1{
-
+    font-family: "Sawarabi Mincho";
   }
 }
 img,video{
@@ -74,6 +74,25 @@ header{
     right: -300px;
     width: 300px;height: 100vh;
     background-color: white;
+    nav{
+      margin: 30px;
+
+    }
+    h1{
+      font-size: 40px;
+
+    }
+    ul{
+      margin: 20px 0;
+      li{
+
+        margin: 20px 0;
+        cursor: pointer;
+        a{
+          color: black;
+        }
+      }
+    }
   }
 }
 
@@ -288,6 +307,12 @@ header{
   grid-gap: 50px;
   .text{
     grid-area: text;
+    .line{
+      height: 1px;width: 100%;
+      background: black;
+      content: "";
+      margin: 10px 0;
+    }
   }
   .image{
     grid-area: image;

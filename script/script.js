@@ -91,8 +91,27 @@ $(window).on('load', function() {
     $(".loading").addClass('trash')
   });
 });
+let first_pos = $('.first').offset().top;
+let content_pos = $('.content').offset().top;
+let clouds_pos = $('.clouds').offset().top;
 
 $(function() {
+  $(".menu_top").click(function() {
+    $("html,body").animate({
+      scrollTop:first_pos
+    });
+  });
+  $(".menu_about").click(function() {
+    $("html,body").animate({
+      scrollTop:content_pos -70
+    });
+  });
+  $(".menu_clouds").click(function() {
+    $("html,body").animate({
+      scrollTop:clouds_pos - 70
+    });
+  });
+
   $(window).scroll(function() {
     let pos = $(this).scrollTop();
     h_boundary = start - pos;

@@ -375,6 +375,10 @@ html p {
   letter-spacing: 0.1em;
 }
 
+html h1 {
+  font-family: "Sawarabi Mincho";
+}
+
 img, video {
   pointer-events: none;
 }
@@ -451,6 +455,27 @@ header .menu {
   width: 300px;
   height: 100vh;
   background-color: white;
+}
+
+header .menu nav {
+  margin: 30px;
+}
+
+header .menu h1 {
+  font-size: 40px;
+}
+
+header .menu ul {
+  margin: 20px 0;
+}
+
+header .menu ul li {
+  margin: 20px 0;
+  cursor: pointer;
+}
+
+header .menu ul li a {
+  color: black;
 }
 
 .hamburger {
@@ -1032,6 +1057,14 @@ header .menu {
 
 .clouds_contentwrap .text {
   grid-area: text;
+}
+
+.clouds_contentwrap .text .line {
+  height: 1px;
+  width: 100%;
+  background: black;
+  content: "";
+  margin: 10px 0;
 }
 
 .clouds_contentwrap .image {
